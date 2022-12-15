@@ -2,15 +2,15 @@ use std::env;
 use text_colorizer::*;
 mod module_killer;
 
-
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().skip(1).collect();
     let file_path = parse_args(args);
+
     match module_killer::kill_module(file_path.to_string()) {
-        Ok(_) => {
+        Ok(count) => {
             eprintln!(
-                "\u{1F977}  node modules recursively removed  throughout  {}",
-                file_path
+                "\u{1F977}  {} node modules recursively removed  throughout  {}",
+                count, file_path
             )
         }
         Err(_) => {
@@ -22,7 +22,7 @@ fn main() -> std::io::Result<()> {
     Ok(())
 }
 
-fn parse_args(args:Vec<String>) -> String {
+fn parse_args(args: Vec<String>) -> String {
     match args {
         args if args.is_empty() => {
             eprintln!(
@@ -41,5 +41,3 @@ fn parse_args(args:Vec<String>) -> String {
         _ => args[0].clone(),
     }
 }
-
-

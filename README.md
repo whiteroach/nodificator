@@ -12,4 +12,4 @@ Todo:
 - [ ] Re-Organize modules
 - [ ] Improve Error Handling
 - [ ] Add Help functionality
-- [ ] Add a counter that counts number of node_modules removed recursively.
+- [x] Add a counter that counts number of node_modules removed recursively.
