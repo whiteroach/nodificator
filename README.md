@@ -8,8 +8,10 @@ A script to recursively remove all node_modules throughout a given folder.
 
 Todo:
 
-- [ ] Improve README file
-- [ ] Re-Organize modules
-- [ ] Improve Error Handling
-- [ ] Add Help functionality
-- [x] Add a counter that counts number of node_modules removed recursively.
+- [ ] Improve README file.
+- [ ] Re-Organize modules.
+- [ ] Improve Error Handling.
+- [ ] Add Help functionality.
+- [ ] Use Path instead of strings of format.
+- [ ] Use std::path::MAIN_SEPARATOR instead of /.
+- [x] Add a counter that counts number of node_modules .removed recursively.
