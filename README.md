@@ -4,7 +4,7 @@
 
 A script to recursively remove all node_modules throughout a given folder.
 
-</br>
+<br>
 
 Todo:
 

@@ -5,11 +5,11 @@ mod module_killer;
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().skip(1).collect();
     let file_path = parse_args(args);
-
-    match module_killer::kill_module(file_path.to_string()) {
+    let mut counter = 0;
+    match module_killer::kill_module(file_path.to_string(), &mut counter) {
         Ok(count) => {
             eprintln!(
-                "\u{1F977}  {} node modules recursively removed  throughout  {}",
+                "\u{1F977}  {} node_modules recursively removed  throughout  {}",
                 count, file_path
             )
         }
