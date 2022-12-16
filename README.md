@@ -1,4 +1,4 @@
-Choose a directory that you want to free from the bourdon of node_modules and run # NODIFICATOR
+# NODIFICATOR
 
 ### **Nodificator has no mercy!**
 
