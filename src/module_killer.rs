@@ -44,19 +44,19 @@ fn parse_args(args: Vec<String>) -> PathBuf {
     match args {
         args if args.is_empty() => {
             eprintln!(
-                "{} Path argument is required ex:\n cargo run <../path>\n",
+                "{} Path argument is required ex:\n nodificator <path>\n",
                 "Error:".red().bold()
             );
             std::process::exit(1)
         }
         args if args.len() > 1 => {
             eprintln!(
-                "{} Nodificator require only one parameter path, ex: cargo run <path/>",
+                "{} Nodificator require only one parameter path, ex: ./nodificator <path>",
                 "Error:".red().bold()
             );
             std::process::exit(1)
         }
-        args if args[0] == "help" || args[0] == "h" => {
+        args if args[0] == "--help" || args[0] == "h" => {
             call_help();
             std::process::exit(1)
         }
@@ -65,5 +65,5 @@ fn parse_args(args: Vec<String>) -> PathBuf {
 }
 
 fn call_help() -> () {
-    eprintln!("NODIFICATOR:\nA script to recursively remove all node_modules throughout a given folder.\nUsage: cargo run <../path>\n   h, help   This help text ")
+    eprintln!("NODIFICATOR:\nA script to recursively remove all node_modules throughout a given folder.\nUsage: ./nodificator <path>\n   h, --help   This help text ")
 }

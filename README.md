@@ -5,20 +5,28 @@
 A script to recursively remove all node_modules throughout a given folder.
 ![nodificator](https://i.ibb.co/PN5vd42/nodificator.png)
 
+### Build
+
+Build the crate using cargo:
+
+```
+cargo build --release
+```
+
 ### Usage:
 
 Choose a directory that you want to free from the bourdon of node_modules and run :
 
 ```
-cargo run <path>
+./nodificator <path>
 ```
 
-You can also type "h" or "help" to access the commands available:
+You can also type "h" or "--help" to access the commands available:
 
 ```
-cargo run h
+./nodificator h
 //or
-cargo run help
+./nodificator --help
 ```
 
 <br>
